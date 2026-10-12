@@ -1,0 +1,182 @@
+
+/* ==========================================================================
+   CSS-переменные
+   ========================================================================== */
+
+:root {
+  /* Цвета */
+  --color-white: #ffffff;
+  --color-primary: #00A5E1;
+  --color-secondary: #FF7319;
+  --color-tertiary: #FFCE2E;
+
+  --color-text-primary: #001317;
+  --color-text-secondary: #334245;
+  --color-text-tertiary: #808080;;
+
+  --color-bg: #ffffff;
+  --color-bg-alt: #F5F8FE;
+
+  --color-border-primary: #808080;
+  --color-border-secondary: #CFCFCF;
+
+  --color-success-text: #009862;
+  --color-success: #D2F5E9;
+  --color-error-text: #EB5757;
+  --color-error: #FFF0F0;
+  --color-warning-text: #7D7D65;
+  --color-warning: #FFFADD;
+
+  /* Типографика */
+  --font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
+        "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-size: 16px;
+
+  /* Радиусы и тени */
+  --br: 8px;
+  --shadow: box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.32), 0 4px 8px 0 rgba(0, 0, 0, 0.16);
+
+  /* Контейнер */
+  --container-width: 1440px;
+  --container-padding: 1rem;
+
+}
+
+/* ==========================================================================
+   Базовый сброс и настройки
+   ========================================================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+   width: 100%;
+    height: 100%;
+    scroll-behavior: smooth;
+    position: relative;
+}
+
+body {
+  max-width: 100%;
+  min-height: 100svh;
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  font-weight: 400;
+  line-height: 1.25;
+  color: var(--color-text-primary);
+  position: relative;
+}
+body.stop-scrolling{
+    overflow: hidden;
+}
+/* Изображения и медиа */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Форматирование текста по умолчанию */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0 0 0.75rem 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  color: var(--color-text-primary);
+}
+a:hover{
+  color: var(--color-primary);
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Формы наследуют шрифт */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+/* Убираем стрелки у чисел в input в Chrome/Safari */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Таблицы */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+/* ==========================================================================
+   Утилитарные классы
+   ========================================================================== */
+
+.container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+/* ==========================================================================
+   Основные стили
+   ========================================================================== */
+
+   
+
+
+
+@media screen and (max-width: 1400px){
+  
+}
+@media screen and (max-width: 1200px){
+  
+}
+@media screen and (max-width: 1024px){
+  
+}
+@media screen and (max-width: 768px){
+  
+}
+@media screen and (max-width: 520px){
+  
+}
