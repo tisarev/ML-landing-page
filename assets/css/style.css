@@ -155,7 +155,124 @@ table {
    Основные стили
    ========================================================================== */
 
-   
+   .faq-container {
+            width: 100%;
+            max-width: 800px;
+            background: #fff; /* Или прозрачный, как на скрине */
+        }
+
+        /* Стиль отдельного элемента (вопрос + ответ) */
+        .faq-item {
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        /* Убираем границу у последнего элемента, если нужно, но на скрине линии есть у всех */
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        /* Стиль заголовка (кнопки) */
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 24px 0;
+            background: none;
+            border: none;
+            cursor: pointer;
+            text-align: left;
+            font-size: 20px;
+            font-weight: 600;
+            color: #222;
+            transition: color 0.3s;
+        }
+
+        .faq-question:hover {
+            color: #000;
+        }
+
+        /* Контейнер для иконки (плюс/крестик) */
+        .icon-wrapper {
+            position: relative;
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+            margin-left: 20px;
+        }
+
+        /* Рисуем иконку через псевдоэлементы */
+        .icon-wrapper::before,
+        .icon-wrapper::after {
+            content: '';
+            position: absolute;
+            background-color: #ff5722; /* Оранжевый цвет */
+            transition: transform 0.3s ease;
+        }
+
+        /* Горизонтальная линия плюса */
+        .icon-wrapper::before {
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            transform: translateY(-50%);
+        }
+
+        /* Вертикальная линия плюса */
+        .icon-wrapper::after {
+            left: 50%;
+            top: 0;
+            width: 2px;
+            height: 100%;
+            transform: translateX(-50%);
+        }
+
+        /* --- Состояние открытого вопроса --- */
+        
+        /* Вариант с полным поворотом (крестик) */
+        .faq-item.active .icon-wrapper {
+            transform: rotate(45deg); /* Поворачиваем весь контейнер на 45 градусов */
+        }
+      
+        
+        /* Чтобы был именно КРЕСТИК (как на скрине), а не минус: */
+        /* Мы не скрываем, а поворачиваем контейнер, но тогда нужно центрировать */
+        
+        /* Переопределим логику для крестика */
+        .icon-wrapper {
+            transition: transform 0.3s ease;
+        }
+        
+        .faq-item.active .icon-wrapper {
+            transform: rotate(45deg);
+        }
+        
+        /* При повороте на 45 градусов плюс становится крестиком */
+
+
+        /* Стиль ответа */
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #444;
+        }
+
+        /* Внутренний отступ для текста, чтобы анимация max-height работала корректно */
+        .faq-answer p {
+            padding-bottom: 24px;
+            margin: 0;
+        }
+        
+        /* Немного отступа для текста, если он идет списком */
+        .faq-answer ul {
+            margin-top: 0;
+            padding-bottom: 24px;
+            padding-left: 20px;
+        }
 
 
 
