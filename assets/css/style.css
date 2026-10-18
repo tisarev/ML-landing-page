@@ -284,17 +284,162 @@ ul.menu{
 }
 .benefits-content .wrapper-info{
   flex: 1;
+  position: relative;
 }
 .benefits-content .wrapper-text{
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 20px;
+}
+.hero .pretitle{
+  color: var(--color-tertiary);
 }
 .pretitle{
   text-transform: uppercase;
   color: var(--color-secondary);
   font-weight: bold;
+}
+#benefits-info-img{
+  width: 271px;
+  height: 309px;
+  background: url(../img/graph.svg) 0 0 no-repeat;
+  text-transform: uppercase;
+  position: relative;
+  font-weight: bold;
+  margin-left: 80px;
+  margin-top: 50px;
+}
+#benefits-info-img span{
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%);
+}
+#benefits-info-text{
+  width: 50%;
+  left: 50%;
+  top: 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  position: absolute;
+  text-wrap: balance;
+}
+#benefits-info-text span{
+  color: var(--color-secondary);
+}
+#benefits-info-text b{
+  font-size: 40px;
+  font-weight: bold;
+  color: var(--color-secondary);
+  display: block;
+  margin-bottom: 6px;
+}
+.fs-20{
+  font-size: 20px;
+  font-weight: 500;
+}
+.benefits-info-list{
+  width: 150px;
+  font-size: 14px;
+  padding: 16px;
+  border-radius: var(--br);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  background: #fff;
+  position: absolute;
+}
+.benefits-info-list img{
+  width: 24px;
+  height: 24px;
+}
+#benefits-info-list-1{
+  top: 0;
+  left: 0;
+}
+#benefits-info-list-2{
+  right: 40px;
+  top: 40%;
+}
+#benefits-info-list-3{
+  bottom: 0;
+  right: 180px
+}
+.benefits-content{
+  position: relative;
+  padding-bottom: 40px;
+}
+#benefits-info-i{
+  font-size: 14px;
+  width: 50%;
+  font-style: italic;
+  padding-top: 25px;
+}
+.benefits-banner{
+  margin-top: 20px;
+  padding: 16px 30px;
+  border-radius: var(--br);
+  color: var(--color-white);
+  background: #C12D01 url(../img/map-img.jpg) right center no-repeat;
+  background-size: contain;
+}
+.benefits-banner b{
+  text-transform: uppercase;
+}
+.benefits-banner i{
+  margin-top: 6px;
+  display: block;
+  font-size: 12px;
+  font-style: italic;
+}
+.benefits{
+  background: linear-gradient(180deg, #fff 50.09%, #f3f6fa 100%);
+}
+.benefits-list,
+.benefits-list-grid{
+  display: flex;
+  gap: 20px;
+}
+.benefits-list-wrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.benefits-card{
+  background-color: var(--color-white);
+  border: 1px solid #CACACA;
+  border-radius: var(--br);
+  padding: 24px;
+  gap: 16px;
+  display: flex;
+  flex-direction: column;
+}
+.benefits .stat-header{
+  display: flex;
+  gap: 25px;
+}
+.benefits .stat-percent{
+  width: 125px;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+.benefits .stat-percent b{
+  color: var(--color-secondary);
+  font-weight: bold;
+  font-size: 40px;
+}
+.benefits .stat-desc p{
+  font-size: 14px;
+}
+.benefits .stat-desc h3{
+  margin-bottom: 6px;
+}
+.benefits-comparison-title{
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 16px;
 }
 /* ==========================================================================
    Вопрос ответ
