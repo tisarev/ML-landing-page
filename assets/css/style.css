@@ -92,6 +92,7 @@ h1{
 }
 h2{
   font-size: 40px;
+  text-wrap: balance;
 }
 p {
   margin: 0 0 0.75rem 0;
@@ -154,125 +155,268 @@ table {
 /* ==========================================================================
    Основные стили
    ========================================================================== */
+header .container{
+  display: flex;
+  min-height: 110px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.logo{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.logo img{
+  width: 120px;
+  height: auto;
+}
+ul.menu{
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  text-transform: uppercase;
+  gap: 40px;
+  font-weight: bold;
+}
+.phone{
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.phone b{
+  font-size: 20px;
+}
+.hero{
+  max-width: 1680px;
+  margin: 0 auto;
+  width: 100%;
+  height: calc(100svh - 120px);
+  background: linear-gradient(180deg, #020035 12.47%, #0090d9 56.25%, #b6d4de 100%);
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--br);
+}
+.hero-img-1,
+.hero-img-2,
+.hero-img-3{
+  position: absolute;
+}
+.hero-img-1{
+  top: 240px;
+  left: 0;
+  width: 100%;
+  height: 326px;
+  background: url('../img/hero-clo.png') center top repeat-x;
+  animation: cloudMove 30s linear infinite;
+}
+@keyframes cloudMove {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -1000px 0; /* сдвиг на ширину тайла */
+  }
+}
+.hero-img-2{
+  bottom: -20px;
+  left: 0;
+  z-index: 1;
+}
+.hero-img-3{
+  bottom: -20px;
+  right: -100px;
+  z-index: 2;
+}
+.hero .wrapper-text{
+  position: relative;
+  z-index: 3;
+  color: var(--color-white);
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.hero .subtitle{
+  width: 100%;
+  max-width: 600px;
+}
+.btns{
+  display: flex;
+  gap: 24px;
+  padding-top: 24px;
+}
+.btn{
+  display: inline-flex;
+  align-items: center;
+  height: 60px;
+  padding: 032px;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: var(--br);
+}
+.btn:hover{
+  opacity: 0.8;
+}
+.hero .btn-primary{
+  background-color: var(--color-white);
+  color: var(--color-text-primary);
+}
+.btn-primary{
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+.hero .btn-secondary{
+  border: 1px solid var(--color-white);
+  color: var(--color-white);
+}
+.btn-secondary{
+  border: 1px solid var(--color-primar);
+  color: var(--color-primar);
+}
+.section{
+  padding: 80px 0;
+}
+.benefits-content{
+  display: flex;
+  gap: 24px;
+}
+.benefits-content .wrapper-info{
+  flex: 1;
+}
+.benefits-content .wrapper-text{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.pretitle{
+  text-transform: uppercase;
+  color: var(--color-secondary);
+  font-weight: bold;
+}
+/* ==========================================================================
+   Вопрос ответ
+   ========================================================================== */   
+  .faq-container {
+      width: 100%;
+      max-width: 800px;
+      background: #fff; /* Или прозрачный, как на скрине */
+  }
 
-   .faq-container {
-            width: 100%;
-            max-width: 800px;
-            background: #fff; /* Или прозрачный, как на скрине */
-        }
+  /* Стиль отдельного элемента (вопрос + ответ) */
+  .faq-item {
+      border-bottom: 1px solid #e0e0e0;
+  }
 
-        /* Стиль отдельного элемента (вопрос + ответ) */
-        .faq-item {
-            border-bottom: 1px solid #e0e0e0;
-        }
+  /* Убираем границу у последнего элемента, если нужно, но на скрине линии есть у всех */
+  .faq-item:last-child {
+      border-bottom: none;
+  }
 
-        /* Убираем границу у последнего элемента, если нужно, но на скрине линии есть у всех */
-        .faq-item:last-child {
-            border-bottom: none;
-        }
+  /* Стиль заголовка (кнопки) */
+  .faq-question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding: 24px 0;
+      background: none;
+      border: none;
+      cursor: pointer;
+      text-align: left;
+      font-size: 20px;
+      font-weight: 600;
+      color: #222;
+      transition: color 0.3s;
+  }
 
-        /* Стиль заголовка (кнопки) */
-        .faq-question {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-            padding: 24px 0;
-            background: none;
-            border: none;
-            cursor: pointer;
-            text-align: left;
-            font-size: 20px;
-            font-weight: 600;
-            color: #222;
-            transition: color 0.3s;
-        }
+  .faq-question:hover {
+      color: #000;
+  }
 
-        .faq-question:hover {
-            color: #000;
-        }
+  /* Контейнер для иконки (плюс/крестик) */
+  .icon-wrapper {
+      position: relative;
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+      margin-left: 20px;
+  }
 
-        /* Контейнер для иконки (плюс/крестик) */
-        .icon-wrapper {
-            position: relative;
-            width: 20px;
-            height: 20px;
-            flex-shrink: 0;
-            margin-left: 20px;
-        }
+  /* Рисуем иконку через псевдоэлементы */
+  .icon-wrapper::before,
+  .icon-wrapper::after {
+      content: '';
+      position: absolute;
+      background-color: #ff5722; /* Оранжевый цвет */
+      transition: transform 0.3s ease;
+  }
 
-        /* Рисуем иконку через псевдоэлементы */
-        .icon-wrapper::before,
-        .icon-wrapper::after {
-            content: '';
-            position: absolute;
-            background-color: #ff5722; /* Оранжевый цвет */
-            transition: transform 0.3s ease;
-        }
+  /* Горизонтальная линия плюса */
+  .icon-wrapper::before {
+      top: 50%;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      transform: translateY(-50%);
+  }
 
-        /* Горизонтальная линия плюса */
-        .icon-wrapper::before {
-            top: 50%;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            transform: translateY(-50%);
-        }
+  /* Вертикальная линия плюса */
+  .icon-wrapper::after {
+      left: 50%;
+      top: 0;
+      width: 2px;
+      height: 100%;
+      transform: translateX(-50%);
+  }
 
-        /* Вертикальная линия плюса */
-        .icon-wrapper::after {
-            left: 50%;
-            top: 0;
-            width: 2px;
-            height: 100%;
-            transform: translateX(-50%);
-        }
+  /* --- Состояние открытого вопроса --- */
+  
+  /* Вариант с полным поворотом (крестик) */
+  .faq-item.active .icon-wrapper {
+      transform: rotate(45deg); /* Поворачиваем весь контейнер на 45 градусов */
+  }
 
-        /* --- Состояние открытого вопроса --- */
-        
-        /* Вариант с полным поворотом (крестик) */
-        .faq-item.active .icon-wrapper {
-            transform: rotate(45deg); /* Поворачиваем весь контейнер на 45 градусов */
-        }
-      
-        
-        /* Чтобы был именно КРЕСТИК (как на скрине), а не минус: */
-        /* Мы не скрываем, а поворачиваем контейнер, но тогда нужно центрировать */
-        
-        /* Переопределим логику для крестика */
-        .icon-wrapper {
-            transition: transform 0.3s ease;
-        }
-        
-        .faq-item.active .icon-wrapper {
-            transform: rotate(45deg);
-        }
-        
-        /* При повороте на 45 градусов плюс становится крестиком */
+  
+  /* Чтобы был именно КРЕСТИК (как на скрине), а не минус: */
+  /* Мы не скрываем, а поворачиваем контейнер, но тогда нужно центрировать */
+  
+  /* Переопределим логику для крестика */
+  .icon-wrapper {
+      transition: transform 0.3s ease;
+  }
+  
+  .faq-item.active .icon-wrapper {
+      transform: rotate(45deg);
+  }
+  
+  /* При повороте на 45 градусов плюс становится крестиком */
 
 
-        /* Стиль ответа */
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease-out;
-            font-size: 16px;
-            line-height: 1.6;
-            color: #444;
-        }
+  /* Стиль ответа */
+  .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+      font-size: 16px;
+      line-height: 1.6;
+      color: #444;
+  }
 
-        /* Внутренний отступ для текста, чтобы анимация max-height работала корректно */
-        .faq-answer p {
-            padding-bottom: 24px;
-            margin: 0;
-        }
-        
-        /* Немного отступа для текста, если он идет списком */
-        .faq-answer ul {
-            margin-top: 0;
-            padding-bottom: 24px;
-            padding-left: 20px;
-        }
+  /* Внутренний отступ для текста, чтобы анимация max-height работала корректно */
+  .faq-answer p {
+      padding-bottom: 24px;
+      margin: 0;
+  }
+  
+  /* Немного отступа для текста, если он идет списком */
+  .faq-answer ul {
+      margin-top: 0;
+      padding-bottom: 24px;
+      padding-left: 20px;
+  }
 
 
 
