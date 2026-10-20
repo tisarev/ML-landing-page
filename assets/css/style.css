@@ -251,6 +251,7 @@ ul.menu{
 .btn{
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   height: 60px;
   padding: 032px;
   font-size: 14px;
@@ -265,9 +266,16 @@ ul.menu{
   background-color: var(--color-white);
   color: var(--color-text-primary);
 }
+.hero .btn-primary:hover{
+  color: var(--color-text-primary);
+}
 .btn-primary{
   background-color: var(--color-primary);
   color: var(--color-white);
+}
+.btn-primary:hover{
+  color: var(--color-white);
+  opacity: .8;
 }
 .hero .btn-secondary{
   border: 1px solid var(--color-white);
@@ -1092,9 +1100,7 @@ ul.pricing-formats-item__list li::before{
   display: flex;
   flex-direction: column;
   gap: 24px;
-}
-.pilot-trial .wrapper-text .btn{
-  display: inline-flex;
+  text-wrap: balance;
 }
 .faq{
   background-color: #F8F6F4;
@@ -1231,7 +1237,11 @@ ul.pricing-formats-item__list li::before{
   color: #fff;
 }
 .contact-footer a{
-  color: var(--color-tertiary);
+  text-decoration: underline;
+  color: #fff;
+}
+.contact-footer a:hover{
+  text-decoration: none;
 }
 .contact-footer .container{
   display: flex;
@@ -1267,7 +1277,66 @@ ul.pricing-formats-item__list li::before{
 .contact-footer__item a{
   font-size: 20px;
 }
-
+.social-list{
+  display: flex;
+  gap: 12px;
+  padding-top: 5px;
+}
+.social-list a:hover{
+  opacity: .8;
+}
+.footer{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-top: 40px;
+  margin-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, .3);
+}
+.btn-300{
+  width: 300px;
+  text-align: center;
+  align-items: center;
+}
+.hero-title {
+  display: flex;
+  align-items: center;
+  height: 36px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: bold;
+  font-style: italic;
+  backdrop-filter: blur(4px);
+  background: rgba(255, 255, 255, 0.2);
+  position: absolute;
+  color: #fff;
+  z-index: 3;
+}
+.hero-title span{
+  opacity: .6;
+}
+.hero-title-1{
+  bottom: 34%;
+  left: 15%;
+}
+.hero-title-2{
+  bottom: 28%;
+  left: 23%;
+}
+.hero-title-3{
+  bottom: 22%;
+  left: 20%;
+}
+.hero-title-4{
+  top: 22%;
+  right: 15%;
+}
+.hero-title-5{
+  top: 28%;
+  right: 10%;
+}
 
 @media screen and (max-width: 1400px){
   
