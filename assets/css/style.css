@@ -999,128 +999,274 @@ small{
   margin-bottom: 6px;
   font-size: 16px;
 }
-/* ==========================================================================
-   Вопрос ответ
-   ========================================================================== */   
-  .faq-container {
-      width: 100%;
-      max-width: 800px;
-      background: #fff; /* Или прозрачный, как на скрине */
-  }
+.pricing-formats-grid{
+  display: flex;
+  gap: 24px;
+  margin-top: 40px;
+}
+.pricing-formats-item{
+  flex: 1;
+  padding: 32px 40px 40px;
+  border-radius: var(--br);
+  border: 1px solid #C0C0C0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  background-color: #fff;
+}
+.pricing-formats-item__header{
+  display: flex;
+  gap: 24px;
+  text-wrap: balance;
+}
+.pricing-formats-item__header b{
+  display: block;
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+.pricing-formats-item__black{
+  background-color: #2F3338;
+  color: #fff;
+  border: none;
+}
+ul.pricing-formats-item__list{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+ul.pricing-formats-item__list li{
+  padding-left: 24px;
+  position: relative;
+}
+.pricing-formats-item__black ul.pricing-formats-item__list li::before{
+  content: "";
+  width: 16px;
+  height: 16px;
+  background: url(../img/icon/icon-13-3.svg) 0 0 no-repeat;
+  position: absolute;
+  top: 2px;
+  left: 0;
+}
+ul.pricing-formats-item__list li::before{
+  content: "";
+  width: 16px;
+  height: 16px;
+  background: url(../img/icon/icon-13-4.svg) 0 0 no-repeat;
+  position: absolute;
+  top: 2px;
+  left: 0;
+}
+.pricing-formats{
+  background-color: #F9FBFE;
+}
+.pilot-trial .container{
+  display: flex;
+  gap: 80px;
+}
+.pilot-trial .wrapper-list{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  flex: 1;
+}
+.pilot-trial .wrapper-item{
+  background-color: #F8F6F4;
+  padding: 24px;
+  border-radius: var(--br);
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  font-weight: bold;
+}
+.pilot-trial .wrapper-item img{
+  width: 48px;
+  height: 48px;
+}
+.pilot-trial .wrapper-item.active{
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+}
+.pilot-trial .wrapper-text{
+  max-width: 600px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.pilot-trial .wrapper-text .btn{
+  display: inline-flex;
+}
+.faq{
+  background-color: #F8F6F4;
+}
+.faq .container{
+  display: flex;
+  gap: 80px;
+} 
+.faq .wrapper-text{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.faq-container {
+    width: 100%;
+    max-width: 800px;
+}
 
-  /* Стиль отдельного элемента (вопрос + ответ) */
-  .faq-item {
-      border-bottom: 1px solid #e0e0e0;
-  }
+/* Стиль отдельного элемента (вопрос + ответ) */
+.faq-item {
+    border-bottom: 1px solid #e0e0e0;
+}
 
-  /* Убираем границу у последнего элемента, если нужно, но на скрине линии есть у всех */
-  .faq-item:last-child {
-      border-bottom: none;
-  }
+/* Убираем границу у последнего элемента, если нужно, но на скрине линии есть у всех */
+.faq-item:last-child {
+    border-bottom: none;
+}
 
-  /* Стиль заголовка (кнопки) */
-  .faq-question {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 100%;
-      padding: 24px 0;
-      background: none;
-      border: none;
-      cursor: pointer;
-      text-align: left;
-      font-size: 20px;
-      font-weight: 600;
-      color: #222;
-      transition: color 0.3s;
-  }
+/* Стиль заголовка (кнопки) */
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 24px 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    font-size: 20px;
+    font-weight: 600;
+    color: #222;
+    transition: color 0.3s;
+}
 
-  .faq-question:hover {
-      color: #000;
-  }
+.faq-question:hover {
+    color: #000;
+}
 
-  /* Контейнер для иконки (плюс/крестик) */
-  .icon-wrapper {
-      position: relative;
-      width: 20px;
-      height: 20px;
-      flex-shrink: 0;
-      margin-left: 20px;
-  }
+/* Контейнер для иконки (плюс/крестик) */
+.icon-wrapper {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    margin-left: 20px;
+}
 
-  /* Рисуем иконку через псевдоэлементы */
-  .icon-wrapper::before,
-  .icon-wrapper::after {
-      content: '';
-      position: absolute;
-      background-color: #ff5722; /* Оранжевый цвет */
-      transition: transform 0.3s ease;
-  }
+/* Рисуем иконку через псевдоэлементы */
+.icon-wrapper::before,
+.icon-wrapper::after {
+    content: '';
+    position: absolute;
+    background-color: #ff5722; /* Оранжевый цвет */
+    transition: transform 0.3s ease;
+}
 
-  /* Горизонтальная линия плюса */
-  .icon-wrapper::before {
-      top: 50%;
-      left: 0;
-      width: 100%;
-      height: 2px;
-      transform: translateY(-50%);
-  }
+/* Горизонтальная линия плюса */
+.icon-wrapper::before {
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    transform: translateY(-50%);
+}
 
-  /* Вертикальная линия плюса */
-  .icon-wrapper::after {
-      left: 50%;
-      top: 0;
-      width: 2px;
-      height: 100%;
-      transform: translateX(-50%);
-  }
+/* Вертикальная линия плюса */
+.icon-wrapper::after {
+    left: 50%;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    transform: translateX(-50%);
+}
 
-  /* --- Состояние открытого вопроса --- */
-  
-  /* Вариант с полным поворотом (крестик) */
-  .faq-item.active .icon-wrapper {
-      transform: rotate(45deg); /* Поворачиваем весь контейнер на 45 градусов */
-  }
+/* --- Состояние открытого вопроса --- */
 
-  
-  /* Чтобы был именно КРЕСТИК (как на скрине), а не минус: */
-  /* Мы не скрываем, а поворачиваем контейнер, но тогда нужно центрировать */
-  
-  /* Переопределим логику для крестика */
-  .icon-wrapper {
-      transition: transform 0.3s ease;
-  }
-  
-  .faq-item.active .icon-wrapper {
-      transform: rotate(45deg);
-  }
-  
-  /* При повороте на 45 градусов плюс становится крестиком */
+/* Вариант с полным поворотом (крестик) */
+.faq-item.active .icon-wrapper {
+    transform: rotate(45deg); /* Поворачиваем весь контейнер на 45 градусов */
+}
 
 
-  /* Стиль ответа */
-  .faq-answer {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.3s ease-out;
-      font-size: 16px;
-      line-height: 1.6;
-      color: #444;
-  }
+/* Чтобы был именно КРЕСТИК (как на скрине), а не минус: */
+/* Мы не скрываем, а поворачиваем контейнер, но тогда нужно центрировать */
 
-  /* Внутренний отступ для текста, чтобы анимация max-height работала корректно */
-  .faq-answer p {
-      padding-bottom: 24px;
-      margin: 0;
-  }
-  
-  /* Немного отступа для текста, если он идет списком */
-  .faq-answer ul {
-      margin-top: 0;
-      padding-bottom: 24px;
-      padding-left: 20px;
-  }
+/* Переопределим логику для крестика */
+.icon-wrapper {
+    transition: transform 0.3s ease;
+}
 
+.faq-item.active .icon-wrapper {
+    transform: rotate(45deg);
+}
+
+/* При повороте на 45 градусов плюс становится крестиком */
+
+
+/* Стиль ответа */
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #444;
+}
+
+/* Внутренний отступ для текста, чтобы анимация max-height работала корректно */
+.faq-answer p {
+    padding-bottom: 24px;
+    margin: 0;
+}
+
+/* Немного отступа для текста, если он идет списком */
+.faq-answer ul {
+    margin-top: 0;
+    padding-bottom: 24px;
+    padding-left: 20px;
+}
+.contact-footer{
+  background: url(../img/footer-fon.jpg) 0 0 no-repeat;
+  background-size: cover;
+  color: #fff;
+}
+.contact-footer a{
+  color: var(--color-tertiary);
+}
+.contact-footer .container{
+  display: flex;
+  gap: 60px;
+}
+.contact-footer .wrapper-form{
+  width: 100%;
+  max-width: 600px;
+  background-color: #fff;
+  border-radius: var(--br);
+  padding: 40px;
+}
+.contact-footer .subtitle{
+  font-size: 16px;
+  text-wrap: balance;
+}
+.contact-footer .wrapper-text{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.contact-footer__info{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+.contact-footer__item b,
+.contact-footer__item a{
+  display: block;
+  margin-top: 8px;
+  font-size: 24px;
+}
+.contact-footer__item a{
+  font-size: 20px;
+}
 
 
 @media screen and (max-width: 1400px){
