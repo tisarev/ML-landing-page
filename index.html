@@ -64,7 +64,10 @@
 <section class="hero">
     <div class="hero-img-1"></div>
     <img class="hero-img-2" src="./assets/img/hero-img.png">
-    <img class="hero-img-3" src="./assets/img/header-img.svg">
+    <picture>
+        <source media="(max-height: 900px)" srcset="./assets/img/header-img-2.svg">
+        <img class="hero-img-3" src="./assets/img/header-img.svg" alt="">
+    </picture>
     <div class="hero-title hero-title-1"><span>Ансаибли ML-моделей</span></div>
     <div class="hero-title hero-title-2"><span>Экспертная корректировка</span></div>
     <div class="hero-title hero-title-3"><span>Готовый рабочий процесс</span></div>
@@ -89,23 +92,27 @@
         <div class="benefits-content">
             <div class="wrapper-info">
                 <div id="benefits-info-img"><span>Россия</span></div>
-                <div id="benefits-info-text">
-                    <b>>15%</b>
-                    энергопотребления РФ прогнозируется ежедневно на решениях <span>ИНФОПРО</span>
+                <div class="benefits-info-wrapper">
+                    <div id="benefits-info-text">
+                        <b>>15%</b>
+                        энергопотребления РФ прогнозируется ежедневно на решениях <span>ИНФОПРО</span>
+                    </div>
+                    <div class="benefits-info-list-wrapper">
+                        <div id="benefits-info-list-1" class="benefits-info-list">
+                            <img src="./assets/img/icon/icon-2-1.svg" alt="Ежедневные расчёты">
+                            Ежедневные расчёты
+                        </div>
+                        <div id="benefits-info-list-2" class="benefits-info-list">
+                            <img src="./assets/img/icon/icon-2-2.svg" alt="Почасовая детализация">
+                            Почасовая детализация
+                        </div>
+                        <div id="benefits-info-list-3" class="benefits-info-list">
+                            <img src="./assets/img/icon/icon-2-3.svg" alt="Промышленная эксплуатация">
+                            Промышленная эксплуатация
+                        </div>
+                    </div>
+                    <div id="benefits-info-i">Показатель отражает подтверждённый результат промышленной эксплуатации.</div>
                 </div>
-                <div id="benefits-info-list-1" class="benefits-info-list">
-                    <img src="./assets/img/icon/icon-2-1.svg" alt="Ежедневные расчёты">
-                    Ежедневные расчёты
-                </div>
-                <div id="benefits-info-list-2" class="benefits-info-list">
-                    <img src="./assets/img/icon/icon-2-2.svg" alt="Почасовая детализация">
-                    Почасовая детализация
-                </div>
-                <div id="benefits-info-list-3" class="benefits-info-list">
-                    <img src="./assets/img/icon/icon-2-3.svg" alt="Промышленная эксплуатация">
-                    Промышленная эксплуатация
-                </div>
-                <div id="benefits-info-i">Показатель отражает подтверждённый результат промышленной эксплуатации.</div>
             </div>
             <div class="wrapper-text">
                 <div class="pretitle">Промышленный опыт</div>
@@ -407,32 +414,34 @@
             <div class="pretitle">Настройка под клиента</div>
             <h2>Сервис подстраивается под задачу и данные клиента</h2>
             <div class="subtitle">ИНФОПРО анализирует историю, формирует первоначальный ансамбль моделей, обучает и проверяет его на данных, не использованных для обучения.</div>
-            <ol class="adaptation-list">
-                <li class="adaptation-item">
-                    <div class="adaptation-item__number">1</div>
-                    <div class="adaptation-item__text">История <br>данных</div>
-                </li>
-                <li class="adaptation-item">
-                    <div class="adaptation-item__number">2</div>
-                    <div class="adaptation-item__text">Анализ</div>
-                </li>
-                <li class="adaptation-item">
-                    <div class="adaptation-item__number">3</div>
-                    <div class="adaptation-item__text">Ансамбль <br>моделей</div>
-                </li>
-                <li class="adaptation-item">
-                    <div class="adaptation-item__number">4</div>
-                    <div class="adaptation-item__text">Обучение <br>и проверка</div>
-                </li>
-                <li class="adaptation-item">
-                    <div class="adaptation-item__number">5</div>
-                    <div class="adaptation-item__text">Настройка <br>процесса</div>
-                </li>
-                <li class="adaptation-item">
-                    <div class="adaptation-item__number adaptation-item__number__green">6</div>
-                    <div class="adaptation-item__text">Ввод в <br>эксплуатацию</div>
-                </li>
-            </ol>
+            <div class="adaptation-rev">
+                <ol class="adaptation-list">
+                    <li class="adaptation-item">
+                        <div class="adaptation-item__number">1</div>
+                        <div class="adaptation-item__text">История <br>данных</div>
+                    </li>
+                    <li class="adaptation-item">
+                        <div class="adaptation-item__number">2</div>
+                        <div class="adaptation-item__text">Анализ</div>
+                    </li>
+                    <li class="adaptation-item">
+                        <div class="adaptation-item__number">3</div>
+                        <div class="adaptation-item__text">Ансамбль <br>моделей</div>
+                    </li>
+                    <li class="adaptation-item">
+                        <div class="adaptation-item__number">4</div>
+                        <div class="adaptation-item__text">Обучение <br>и проверка</div>
+                    </li>
+                    <li class="adaptation-item">
+                        <div class="adaptation-item__number">5</div>
+                        <div class="adaptation-item__text">Настройка <br>процесса</div>
+                    </li>
+                    <li class="adaptation-item">
+                        <div class="adaptation-item__number adaptation-item__number__green">6</div>
+                        <div class="adaptation-item__text">Ввод в <br>эксплуатацию</div>
+                    </li>
+                </ol>
+            </div>
         </div>
         <div class="wrapper-img">
             <img src="./assets/img/adaptation-img.jpg" alt="Прогнозирование потребления электроэнергии как сервис">
@@ -634,7 +643,7 @@
 <!-- SaaS и On-Prem -->
 <section class="pricing-formats section" id="pricing-formats">
     <div class="container">
-        <div class="pretitle center">SaaS и On-Prem</div>
+        <div class="pretitle center pretitle-24">SaaS и On-Prem</div>
         <h2 class="center">Два формата работы: готовый сервис или собственная платформа</h2>
         <div class="pricing-formats-grid">
             <div class="pricing-formats-item pricing-formats-item__black">
