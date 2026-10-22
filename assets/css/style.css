@@ -1354,19 +1354,19 @@ ul.pricing-formats-item__list li::before{
   z-index: 3;
 }
 .hero-title span{
-  opacity: .6;
+  opacity: .8;
 }
 .hero-title-1{
   bottom: 34%;
-  left: 15%;
+  left: 35%;
 }
 .hero-title-2{
   bottom: 28%;
-  left: 23%;
+  left: 40%;
 }
 .hero-title-3{
   bottom: 22%;
-  left: 20%;
+  left: 38%;
 }
 .hero-title-4{
   top: 22%;
@@ -1429,7 +1429,7 @@ ul.pricing-formats-item__list li::before{
     height: auto;
   }
   .hero-img-2{
-    width: 650px;
+    width: 900px;
     height: auto;
   }
   .hero-title{
