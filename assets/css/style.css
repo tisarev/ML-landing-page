@@ -394,10 +394,15 @@ ul.menu{
 .benefits-banner{
   margin-top: 20px;
   padding: 16px 30px;
+  min-height: 100px;
+  font-size: 20px;
   border-radius: var(--br);
   color: var(--color-white);
   background: #C12D01 url(../img/map-img.jpg) right center no-repeat;
-  background-size: contain;
+  background-size: cover;
+  display: flex;
+ justify-content: center;
+  flex-direction: column;
 }
 .benefits-banner b{
   text-transform: uppercase;
@@ -405,7 +410,7 @@ ul.menu{
 .benefits-banner i{
   margin-top: 6px;
   display: block;
-  font-size: 12px;
+  font-size: 16px;
   font-style: italic;
 }
 .benefits{
@@ -1371,6 +1376,10 @@ ul.pricing-formats-item__list li::before{
   top: 28%;
   right: 10%;
 }
+.pilot-trial__number{
+  font-size: 24px;
+  color: var(--color-secondary);
+}
 @media screen and (max-height: 900px) {
   .hero-title-1{
     bottom: 28%;
@@ -1607,13 +1616,12 @@ ul.pricing-formats-item__list li::before{
     margin: 20px auto 0;
   }
   .workflow-process-list {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
     margin-top: 20px;
     margin-bottom: 20px;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
+    gap: 20px;
   }
   .workflow-process-item::before{
     display: none;
@@ -1662,9 +1670,299 @@ ul.pricing-formats-item__list li::before{
     margin-top: 20px;
     margin-bottom: 10px;
   }
+  .adaptation-item__number{
+    background: none;
+  }
+    .adaptation-item {
+      gap: 10px;
+  }
+  .team-collaboration-item{
+    display: none;
+  }
+  .process-integration .wrapper-text{
+    gap: 10px;
+  }
+  .process-integration-grid {
+    gap: 10px;
+    margin-top: 20px;
+    flex-direction: column;
+  }
+  .process-integration-list {
+    gap: 10px;
+  }
+  .pricing-formats-grid {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  ul.pricing-formats-item__list {
+    gap: 8px;
+  }
+  .pricing-formats-item {
+    padding: 20px;
+    gap: 16px;
+  }
+  .pilot-trial .container {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .pilot-trial .wrapper-text {
+    max-width: 100%;
+    gap: 10px;
+    order: -1;
+  }
+  .pilot-trial .wrapper-list {
+    gap: 10px;
+  }
+  .pilot-trial .wrapper-item {
+    padding: 16px;
+    gap: 20px;
+  }
+  .faq .container{
+    gap: 20px;
+    flex-direction: column;
+  }
+  .contact-footer .container{
+    flex-direction: column;
+    gap: 20px;
+  }
+  .contact-footer .wrapper-text {
+    order: 2;
+    gap: 10px;
+  } 
+  .hero .wrapper-text{
+    gap: 10PX;
+  }
+  #benefits-info-img{
+    font-size: 14px;
+  }
+  .hero {
+    height: auto;
+  }
+  .hero-img-1,
+  .hero-img-2
+  {
+    display: none;
+  }
+  .hero-img-3{
+    position: relative;
+  }
+  .hero-picture{
+    display: flex;
+    order: 2;
+  }
+  .hero{
+    display: flex;
+    flex-direction: column;
+  }
+  .team-collaboration .wrapper-text{
+    gap: 10px;
+  }
+  .hero-img-3 {
+    bottom: -20px;
+    right: 0px;
+  }
+}
 @media screen and (max-width: 768px){
-  
+  #benefits-info-img{
+    display: none;
+  }
+  .section {
+      padding: 40px 0;
+  }
+  h1 {
+    font-size: 36px;
+  }
+  .benefits-list-grid{
+    flex-direction: column;
+  }
+  .benefits-list-grid,
+  .benefits-list {
+    gap: 10px;
+  }
+  .value-proposition-grid{
+    flex-direction: column;
+  }
+  .value-proposition-item img{
+    display: none;
+  }
+  .value-proposition-list,
+  .value-proposition-grid{
+    gap: 10px;
+  }
+  .value-proposition-grid{
+    margin-top: 20px;
+  }
+  .complexity-grid{
+    flex-wrap: wrap;
+  }
+  .complexity-item{
+    width: auto;
+    flex: 1;
+  }
+  .adaptation-list{
+    flex-wrap: wrap;
+  }
+  .adaptation-item{
+    flex: 1;
+    min-width: 120px;
+  }
+  .management-list{
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  .management-item__h img{
+    display: none;
+  }
+  .management-images{
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  .management-images img {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  .management-item img{
+    display: none;
+  }
+  .team-collaboration-wrapper__img{
+    display: none;
+  }
+  .process-integration-item img{
+    display: none;
+  }
+  .faq-question {
+    padding: 10px 0;
+    font-size: 16px;
+  }
+  .contact-footer__item b, .contact-footer__item a{
+    font-size: 16px;
+  }
+  .contact-footer__info{
+    gap: 16px;
+  }
+  .pricing-formats-item__header b{
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+  h2 {
+    font-size: 28px;
+  }
+  .economic-effect-item img{
+    display: none;
+  }
+  .workflow-process-images{
+    gap: 10px;
+  }
+  .workflow-process-item{
+    flex-direction: column;
+  }
+  .workflow-process-item__number{
+    text-align: left;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: flex-start;
+    font-size: 32px;
+  }
+  .adaptation-item__text{
+    text-transform: none;
+  }
+  .workflow-process-item{
+    flex: 1;
+  }
+  .workflow-process-item{
+    align-items: flex-start;
+  }
 }
 @media screen and (max-width: 520px){
-  
+  .workflow-process-images{
+    flex-direction: column;
+  }
+  .phone {
+    background: none;
+    padding-left: 0px;
+  }
+  .logo-text{
+    display: none;
+  }
+  .benefits-banner{
+    background: #C12D01;
+  }
+  .benefits-info-list-wrapper{
+    flex-direction: column;
+  }
+  .benefits-info-list img{
+    display: none;
+  }
+  .benefits-info-list{
+    width: 100%;
+  }
+  #benefits-info-text{
+    width: 100%;
+  }
+  .value-proposition-item h3{
+    font-size: 16px;
+  }
+  .value-proposition-item{
+    padding: 16px;
+  }
+  .arrow-img{
+    width: 30px;
+    height: auto;
+  }
+  .economic-effect-item h3{
+    font-size: 16px;
+  }
+  .process-integration-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .methods-list{
+    flex-direction: column;
+    gap: 10px;
+  }
+  .pilot-trial .wrapper-list {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+  }
+  .management-list{
+    flex-direction: column;
+  }
+  .economic-effect-grid{
+    flex-direction: column;
+    gap: 10px;
+  }
+  .arrow-img{
+    display: none;
+  }
+  .btns{
+    flex-direction: column;
+    gap: 10px;
+  }
+  h1 {
+    font-size: 30px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  .hero-img-3{
+    display: none;
+  }
+  .hero .wrapper-text {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    gap: 10px;
+  }
+  .benefits-list-wrapper {
+    gap: 10px;
+  }
+  .section {
+    padding: 20px 0;
+  }
+  h3{
+    font-size: 16px;
+  }
+  body {
+    font-size: 14px;
+  }
 }

@@ -64,11 +64,11 @@
 <section class="hero">
     <div class="hero-img-1"></div>
     <img class="hero-img-2" src="./assets/img/hero-img.png">
-    <picture>
+    <picture class="hero-picture">
         <source media="(max-height: 900px)" srcset="./assets/img/header-img-2.svg">
         <img class="hero-img-3" src="./assets/img/header-img.svg" alt="">
     </picture>
-    <div class="hero-title hero-title-1"><span>Ансаибли ML-моделей</span></div>
+    <div class="hero-title hero-title-1"><span>Ансамбли ML-моделей</span></div>
     <div class="hero-title hero-title-2"><span>Экспертная корректировка</span></div>
     <div class="hero-title hero-title-3"><span>Готовый рабочий процесс</span></div>
     <div class="hero-title hero-title-4"><span>Почасовая детализация</span></div>
@@ -119,15 +119,15 @@
                 <h2>Технология уже работает в масштабе всей страны</h2>
                 <div class="subtitle fs-20">С помощью решений ИНФОПРО энергосбытовые компании ежедневно прогнозируют более 15% потребления электроэнергии в России — каждый шестой киловатт-час.</div>
                 <div class="benefits-banner">
-                    <b>13 регионов - единый центр <br>прогнозирования для крупной <br>генерирующей компании</b>
-                    <i>Наименование компании-клиента <br>не раскрывается в связи с действующими <br>обязательствами по соблюдению конфиденциальности (NDA).</i>
+                    <b>13 регионов</b>
+                    <i>Единый центр прогнозирования</i>
                 </div>
             </div>
         </div>
         <div class="benefits-list">
             <div class="benefits-list-wrapper">
                 <div class="benefits-list-grid">
-                    <h3>Отрослевая эффективность</h3>
+                    <h3>Отраслевая эффективность</h3>
                 </div>
                 <div class="benefits-list-grid">
                     <article class="benefits-card">
@@ -141,7 +141,7 @@
                             </div>
                         </div>
                         <div class="benefits-comparison-block">
-                            <div class="benefits-comparison-title">Отклонения на балансирующем рынке, МВ т. ч</div>
+                            <div class="benefits-comparison-title">Отклонения на балансирующем рынке, МВт·ч</div>
                             <div class="benefits-comparison-values">
                                 <div class="benefits-old-value"> 
                                     <b>346</b>
@@ -153,7 +153,7 @@
                                 </div>
                             </div>
                             <div class="benefits-result-text">
-                                ≈ 27 МВт·ч меньше каждый час<br>
+                                ≈ 27 МВт·ч в час меньше каждый час<br>
                                 — около 240 ГВт·ч в год
                             </div>
                         </div>
@@ -169,7 +169,7 @@
                             </div>
                         </div>
                         <div class="benefits-comparison-block">
-                            <div class="benefits-comparison-title">Отклонения на балансирующем рынке, МВ т. ч</div>
+                            <div class="benefits-comparison-title">Отклонения на балансирующем рынке, МВт·ч</div>
                             <div class="benefits-comparison-values">
                                 <div class="benefits-old-value">
                                     <b>24,8</b>
@@ -181,7 +181,7 @@
                                 </div>
                             </div>
                             <div class="benefits-result-text">
-                                ≈ 3,4 МВт·ч меньше каждый час <br>
+                                ≈ 3,4 МВт·ч в час меньше каждый час <br>
                                 — около 30 ГВт·ч в год
                             </div>
                         </div>
@@ -285,7 +285,7 @@
                     <div class="value-proposition-item-row">
                         <h3>Высокая точность прогнозирования</h3>
                         <div class="value-proposition-item-important">
-                            Средневзвешенная ошибка (MAPE)  —  1,5 - 1,7%
+                            Средневзвешенная ошибка (MAPE)  —  1,5–1,7 %
                         </div>
                         Показатель отражает подтверждённый результат эксплуатации и не является гарантией точности для каждого объекта. Фактическая точность зависит от региона, объекта и качества исходных данных.
                         <hr>
@@ -312,11 +312,11 @@
                     <h3>Меньше отклонение</h3>
                     точнее планирование объёма
                 </div>
-                <img src="./assets/img/icon/icon-4-3.svg" alt="">
+                <img class="arrow-img" src="./assets/img/icon/icon-4-3.svg" alt="">
                 <div class="economic-effect-item">
-                    <img src="./assets/img/icon/icon-4-2.svg" alt="Меньше отклонение">
-                    <h3>Меньше отклонение</h3>
-                    точнее планирование объёма
+                    <img src="./assets/img/icon/icon-4-2.svg" alt="Меньше затрат">
+                    <h3>Меньше затрат</h3>
+                    на закупку электроэнергии
                 </div>
             </div>
         </div>
@@ -478,7 +478,7 @@
                     <div class="sliding-forecast-item__number">3</div>
                     <div class="sliding-forecast-item__text">
                         <b>Сдвиг горизонта</b>
-                        Х+1 кажный день смещается на следующий календарный день, а весь прогноз пересчитывается.
+                        Х+1 каждый день смещается на следующий календарный день, а весь прогноз пересчитывается.
                     </div>
                 </li>
             </ol>
@@ -493,8 +493,8 @@
             <div class="pretitle">Современный ML-контур</div>
             <h2>Все передовые методы, применимые к задаче</h2>
             <div class="subtitle">
-            <p>Для объекта формируется ансамбль, результаты меделей комбинируются, конфигурация индивидуально настраивается под данные клиента.</p>
-            <p><b>В контур входят и передовые Российские модели:</b></p></div>
+            <p>Для объекта формируется ансамбль, результаты моделей комбинируются, конфигурация индивидуально настраивается под данные клиента.</p>
+            <p><b>В контур входят и передовые российские модели:</b></p></div>
             <div class="methods-list">
                 <div class="methods-item">
                     <img src="./assets/img/icon/icon-9-1.svg" alt="CatBoost">
@@ -605,7 +605,7 @@
             <div class="subtitle">Закупка электроэнергии, подготовка заявок, управление объемами, анализ отклонений и энергопотребления</div>
         </div>
         <div class="process-integration-grid">
-            <img class="process-integration-grid__img" src="./assets/img/process-integration-img.svg" alt="От прогноза к процессу">
+            <img class="process-integration-grid__img" src="./assets/img/process-integration-img.jpg" alt="От прогноза к процессу">
             <div class="process-integration-list">
                 <div class="process-integration-item">
                     <img src="./assets/img/icon/icon-12-1.svg" alt="Планирование закупки">
@@ -629,9 +629,9 @@
                     </div>
                 </div>
                 <div class="process-integration-item">
-                    <img src="./assets/img/icon/icon-12-4.svg" alt="Подача заявок РСВ и иППП">
+                    <img src="./assets/img/icon/icon-12-4.svg" alt="Подача заявок РСВ и ППП">
                     <div class="process-integration-item__text">
-                        <b>Подача заявок РСВ и иППП</b>
+                        <b>Подача заявок РСВ и ППП</b>
                         Автоматизация и контроль подачи заявок на рынок и в плановые процессы.
                     </div>
                 </div>
@@ -666,7 +666,7 @@
                     <img src="./assets/img/icon/icon-13-2.svg" alt="Собственная платформа прогнозирования">
                     <div class="pricing-formats-item__header-wrapper">
                         <b>Собственная платформа прогнозирования</b>
-                        Полноценная платформа прогнозирования и инфраструктуре заказчика.
+                        Полноценная платформа прогнозирования на инфраструктуре заказчика.
                     </div>
                 </div>
                 <ul class="pricing-formats-item__list">
@@ -685,19 +685,19 @@
     <div class="container">
         <div class="wrapper-list">
             <div class="wrapper-item">
-                <img src="./assets/img/icon/icon-14-1.svg" alt="Задача">
+                <div class="pilot-trial__number">1</div>
                 Задача
             </div>
             <div class="wrapper-item">
-                <img src="./assets/img/icon/icon-14-2.svg" alt="Исторические данные">
+                <div class="pilot-trial__number">2</div>
                 Исторические данные
             </div>
             <div class="wrapper-item">
-                <img src="./assets/img/icon/icon-14-3.svg" alt="Анализ и первичная настройка ИНФОПРО">
+                <div class="pilot-trial__number">3</div>
                 Анализ и первичная настройка ИНФОПРО
             </div>
-            <div class="wrapper-item active">
-                <img src="./assets/img/icon/icon-14-4.svg" alt="Проверка и обсуждение результатов">
+            <div class="wrapper-item">
+                <div class="pilot-trial__number">4</div>
                 Проверка и обсуждение результатов
             </div>
         </div>
@@ -715,7 +715,9 @@
     <div class="container">
         <div class="wrapper-text">
             <h2>Частые вопросы</h2>
-            <div class="subtitle">Чтобы прогноз оставался точным день за днём, нужно постоянно следить за данными, моделями и инфраструктурой.</div>
+            <div class="subtitle">
+                Не нашли ответ? Напишите нам
+            </div>
         </div>
         <div class="wrapper-content">
             <div class="faq-container">
