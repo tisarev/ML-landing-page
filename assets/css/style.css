@@ -221,7 +221,7 @@ ul.menu{
   }
 }
 .hero-img-2{
-  bottom: -20px;
+  bottom: 0px;
   left: 0;
   z-index: 1;
 }
@@ -1358,16 +1358,16 @@ ul.pricing-formats-item__list li::before{
   opacity: .8;
 }
 .hero-title-1{
-  bottom: 34%;
-  left: 35%;
+  bottom: 40%;
+  left: 30%;
 }
 .hero-title-2{
-  bottom: 28%;
+  bottom: 34%;
   left: 40%;
 }
 .hero-title-3{
-  bottom: 22%;
-  left: 38%;
+  bottom: 28%;
+  left: 35%;
 }
 .hero-title-4{
   top: 22%;
@@ -1430,7 +1430,7 @@ ul.pricing-formats-item__list li::before{
     height: auto;
   }
   .hero-img-2{
-    width: 900px;
+    width: 700px;
     height: auto;
   }
   .hero-title{
