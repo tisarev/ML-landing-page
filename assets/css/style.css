@@ -594,6 +594,7 @@ small{
   width: 100%;
   min-width: 0;      /* ключевая строка */
   height: auto;
+  border-radius: var(--br);
 }
 .wrapper-text{
   flex: 1;
